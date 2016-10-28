@@ -24,7 +24,7 @@ module data_flow(
     input c,
 	 output [1:0]q
     );
-	assign q[0] = a | (~b&c);
-	assign q[1] = a | b;
+	assign q[0] = a | (~b&c); // a + ~bc
+	assign q[1] = a | b; // a+b
 
 endmodule

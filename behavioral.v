@@ -26,42 +26,42 @@ module behavioral(
     );
 	always @ (a,b,c)
 	begin
-	if(a == 0 && b == 0 && c == 0) 
+	if(a == 0 && b == 0 && c == 0) // When a,b,c = 0
 	begin
 	q[0]<=0;
 	q[1]<=0;
 	end 
-	else if(a == 0 && b == 0 && c == 1)
+	else if(a == 0 && b == 0 && c == 1) // When a,b = 0 & c = 1
 	begin
 	q[0]<=1;
 	q[1]<=0;
 	end
-	else if(a == 0 && b == 1 && c == 0)
+	else if(a == 0 && b == 1 && c == 0) //When a,c = 0 & b = 1
 	begin
 	q[0]<=0;
 	q[1]<=1;
 	end
-	else if(a == 0 && b == 1 && c == 1)
+	else if(a == 0 && b == 1 && c == 1) // When b,c = 1 & a =0
 	begin
 	q[0]<=0;
 	q[1]<=1;
 	end
-	else if(a == 1 && b == 0 && c == 0)
+	else if(a == 1 && b == 0 && c == 0) // When a = 1 & b,c = 0
 	begin
 	q[0]<=1;
 	q[1]<=1;
 	end
-	else if(a == 1 && b == 0 && c == 1)
+	else if(a == 1 && b == 0 && c == 1) // When a,c = 1 & b = 0
 	begin
 	q[0]<=1;
 	q[1]<=1;
 	end
-	else if(a == 1 && b == 1 && c == 0)
+	else if(a == 1 && b == 1 && c == 0) // When a,b = 1 & c = 0
 	begin
 	q[0]<=1;
 	q[1]<=1;
 	end
-	else if(a == 1 && b == 1 && c == 1)
+	else if(a == 1 && b == 1 && c == 1) // When a,b,c = 1
 	begin
 	q[0]<=1;
 	q[1]<=1;

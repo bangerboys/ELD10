@@ -25,9 +25,9 @@ module gatelevel(
 	 output [1:0]q
     );
 	 wire w1,w2;
-	or n1(q[1],a,b);
-	not n2(w1,b);
-	and n3(w2,w1,c);
-	or n4(q[0],a,w2);
+	or n1(q[1],a,b); // q[1] = a + b
+	not n2(w1,b); 	// w1 = ~b
+	and n3(w2,w1,c); // w2 = w1 & c
+	or n4(q[0],a,w2); // q[0] = a + w2
 
 endmodule
